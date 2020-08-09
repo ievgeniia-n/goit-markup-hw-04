@@ -10,6 +10,17 @@
 	--white-1: rgba(255, 255, 255, 0.6);
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 .container {
 	margin-left: auto;
 	margin-right: auto;
@@ -294,6 +305,14 @@ ul {
 	background-position: center;
 }
 
+.network-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.network-icon-member:hover {
+	fill: #ffffff;
+}
 .designer::before {
 	background-image: url(../images/product-designer.jpg);
 }
@@ -309,6 +328,10 @@ ul {
 .uidesigner::before {
 	background-image: url(../images/ui-designer.jpg);
 }
+
+.network-icon-member {
+	fill:#AFB1B8;
+}
 .team-member {
 	margin-top: 0;
 	margin-bottom: 10px;
@@ -322,7 +345,7 @@ ul {
 }
 
 .member .team-item {
-	background-color: white;
+	background-color: #ffffff;
 	border-radius: 0px 0px 4px 4px;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -355,6 +378,10 @@ ul {
 	width: 170px;
 	height: 90px;
 	background-color: #ffffff;
+}
+
+.img-clients-icon {
+	fill:#AFB1B8;
 }
 .order-link {
 	padding: 10px 32px;
@@ -528,3 +555,24 @@ footer {
 .footer .networks {
 	display: flex;
 }
+
+.network-icon {
+	fill: #ffffff;
+}
+
+.network-item:hover {
+	background-color: var(--accent-color);
+}
+
+.network-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	background-size: content;
+}
+.network-item:not(:last-child) {
+	margin-right: 10px;;
