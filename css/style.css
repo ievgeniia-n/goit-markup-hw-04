@@ -59,6 +59,9 @@ ul {
 	color: var(--accent-color);
 }
 
+.page-header {
+	border: 1px solid #ececec;
+}
 .main-nav {
 	padding-top: 24px;
 	display: flex;
@@ -128,7 +131,8 @@ ul {
 }
 
 .page-title {
-	margin-top: 0;
+	padding-top: 200px;
+	margin-top: 0px;
 	margin-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
@@ -160,7 +164,7 @@ ul {
 	height: 120px;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: 100px 25px;
 	border-radius: 4px;
 	background-color: var(--secondary-background-color);
 }
@@ -283,8 +287,8 @@ ul {
 .team-item::before {
 	margin-bottom: 30px;
 	content: "";
-	display:block;
-	height:260px;
+	display: block;
+	height: 260px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -304,7 +308,6 @@ ul {
 
 .uidesigner::before {
 	background-image: url(../images/ui-designer.jpg);
-
 }
 .team-member {
 	margin-top: 0;
@@ -450,7 +453,6 @@ address .link {
 	flex-wrap: wrap;
 }
 
-
 .examples .example-item {
 	box-sizing: border-box;
 	display: inline-block;
@@ -473,7 +475,7 @@ address .link {
 }
 
 .img4::before {
-background-image: url(../images/img4.jpg);
+	background-image: url(../images/img4.jpg);
 }
 
 .img5::before {
@@ -498,7 +500,7 @@ background-image: url(../images/img4.jpg);
 .example-item::before {
 	margin-bottom: 20px;
 	content: "";
-	display:block;
+	display: block;
 	height: 294px;
 	background-size: contain;
 	background-repeat: no-repeat;
