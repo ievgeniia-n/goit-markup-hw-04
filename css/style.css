@@ -8,6 +8,7 @@
 	--black: #000000;
 	--white: #ffffff;
 	--white-1: rgba(255, 255, 255, 0.6);
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -78,6 +79,7 @@ ul {
 }
 .page-header {
 	border: 1px solid #ececec;
+	
 }
 .main-nav {
 	padding-top: 24px;
@@ -89,7 +91,17 @@ ul {
 	margin-left: 85px;
 }
 
-
+.current-link::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+	left: 0;
+	bottom: 0;
+	opacity: 1;
+	background-color: var(--accent-color);
+}
 .auth-nav {
 	display: flex;
 	margin-left: auto;
@@ -117,12 +129,14 @@ ul {
 	letter-spacing: 0.02em;
 	text-decoration: none;
 	color: var(--primary-text-color);
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .site-nav .link {
 	display: block;
 	padding-top: 32px;
-	padding-bottom: 32px;
+	padding-bottom: 28px;
 	font-family: Roboto, sans-serif;
 	font-weight: 500;
 	font-size: 14px;
@@ -130,14 +144,21 @@ ul {
 	letter-spacing: 0.02em;
 	color: var(--title-text-color);
 	text-decoration: none;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 	color: var(--accent-color);
+
 }
 .auth-nav .link:hover,
 .auth-nav .link:focus {
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 	color: var(--accent-color);
 }
 .section-title {
@@ -376,18 +397,26 @@ ul {
 	letter-spacing: 0.03em;
 	color: var(--primary-text-color);
 }
-.network-item-link:hover .network-icon-member,
-.network-item-link:focus .network-icon-member {
+.network-item-link:hover .network-icon-member {
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+	color: var(--accent-color);
 	fill: #ffffff;
 }
 
+.network-item-link:focus .network-icon-member {
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+	color: var(--accent-color);
+	fill: #ffffff;
+}
 
 .clients-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.img-clients {
+.client-link {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -397,24 +426,31 @@ ul {
 	width: 170px;
 	height: 90px;
 	background-color: #ffffff;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .img-clients-icon {
 	fill:#AFB1B8;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 
 
-.img-clients:hover,
-.img-clients:focus {
-	border-color: var(--accent-color);
-}
-
-.img-clients-icon:hover,
-.img-clients-icon:focus  {
+.client-link:hover .img-clients-icon,
+.client-link:focus .img-clients-icon {
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 	fill: var(--accent-color);
 }
 
+.client-link:hover,
+.client-link:focus {
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+	border-color: var(--accent-color);
+}
 
 .order-link {
 	padding: 10px 32px;
@@ -490,11 +526,15 @@ address .link {
 	text-align: center;
 	background-color: var(--secondary-background-color);
 	color: var(--title-text-color);
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 .button .link:hover,
 .button .link:focus {
 	background-color: var(--accent-color);
 	color: #ffffff;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 .portfolio-title {
 	margin-top: 0;
@@ -593,15 +633,6 @@ footer {
 	fill: #ffffff;
 }
 
-.network-item-link:hover {
-	background-color: var(--accent-color);
-	border-radius: 50%;
-}
-.network-item:focus {
-	background-color: var(--accent-color);
-	border-radius: 50%;
-}
-
 .network-item-link {
 	display: inline-flex;
 	justify-content: center;
@@ -611,8 +642,17 @@ footer {
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
 	background-size: content;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
+
+.network-item-link:hover,
+.network-item-link:focus {	
+	background-color: var(--accent-color);
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+}
+
 .network-item:not(:last-child) {
 	margin-right: 10px;;
 
-	
